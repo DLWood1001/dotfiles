@@ -1,0 +1,34 @@
+# Rename Old Window
+rename-window old-aslan-tb2
+
+# Pane Layout
+new-window -n aslan-tb2
+
+# Vertical Splits
+# Note: Split based on column size.
+# Note: Always reselect pane 0, otherwise you will be spliting an 
+#       already split pane. 
+selectp -t 0
+splitw -h -p 50
+
+# Horizontal Splits
+# Note: Select panes in reverse order to split predictably.
+# Note: If you split by targeting pane 0, you'll split an already split
+#       pane.
+selectp -t 1
+splitw -v -p 50
+selectp -t 0
+splitw -v -p 50
+
+# Select top left pane.
+select-pane -t 0
+
+# Launch SSH
+send-keys -t 0 "sleep 2" Enter "clear" Enter "sshpass -p '2!HPAdmin' ssh -o StrictHostKeyChecking=no aslan_core_tb2" Enter
+send-keys -t 1 "sleep 2" Enter "clear" Enter "sshpass -p '2!HPAdmin' ssh -o StrictHostKeyChecking=no aslan_dut_10508" Enter
+send-keys -t 2 "sleep 2" Enter "clear" Enter "sshpass -p '2!HPAdmin' ssh -o StrictHostKeyChecking=no aslan_distro_west_tb2" Enter
+send-keys -t 3 "sleep 2" Enter "clear" Enter "sshpass -p '2!HPAdmin' ssh -o StrictHostKeyChecking=no aslan_distro_east_tb2" Enter
+
+# Delete Old Window
+kill-window -t old-aslan-tb2 
+

@@ -1,0 +1,8 @@
+
+source ~/.tmux/screens.3.session
+new-window
+source ~/.tmux/screens.4.session
+new-window
+source ~/.tmux/screens.5.session
+new-window
+split-window -h

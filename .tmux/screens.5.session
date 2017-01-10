@@ -1,0 +1,50 @@
+# Rename Old Window
+rename-window old-window
+
+# Pane Layout
+new-window -n ops
+
+# Vertical Splits
+# Note: Split based on column size.
+# Note: Always reselect pane 0, otherwise you will be spliting an 
+#       already split pane. 
+selectp -t 0
+splitw -h -p 33
+selectp -t 0
+splitw -h -p 50
+
+# Horizontal Splits
+# Note: Select panes in reverse order to split predictably.
+# Note: If you split by targeting pane 0, you'll split an already split
+#       pane.
+selectp -t 2
+splitw -v -p 50
+selectp -t 1
+splitw -v -p 50
+selectp -t 0
+splitw -v -p 50
+
+# Select top left pane.
+select-pane -t 0
+
+# Set Layout Option
+select-layout tiled-v
+
+# Delete Old Window
+kill-window -t old-window
+
+# Launch SSH
+send-keys -t 0 "sleep 2" Enter "clear" Enter "ssh ops_fab1" Enter
+send-keys -t 1 "sleep 2" Enter "clear" Enter "ssh ops_fab2" Enter
+send-keys -t 2 "sleep 2" Enter "clear" Enter "ssh ops_spine1" Enter Enter Enter
+send-keys -t 3 "sleep 2" Enter "clear" Enter "ssh ops_spine2" Enter Enter Enter
+send-keys -t 4 "sleep 2" Enter "clear" Enter "ssh ops_spine3" Enter Enter Enter
+send-keys -t 5 "sleep 2" Enter "clear" Enter "ssh ops_spine4" Enter Enter Enter
+
+# Rename Window
+rename-window Fab
+
+# Change Name
+# This doesn't seem to work??
+#command-prompt -I "6-screens" "rename-window %%"
+

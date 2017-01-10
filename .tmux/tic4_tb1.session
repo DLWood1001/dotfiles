@@ -1,0 +1,34 @@
+# Rename Old Window
+rename-window old-tic-dut-tb1
+
+# Pane Layout
+new-window -n tic-dut-tb1
+
+# Vertical Splits
+# Note: Split based on column size.
+# Note: Always reselect pane 0, otherwise you will be spliting an 
+#       already split pane. 
+selectp -t 0
+splitw -h -p 50
+
+# Horizontal Splits
+# Note: Select panes in reverse order to split predictably.
+# Note: If you split by targeting pane 0, you'll split an already split
+#       pane.
+selectp -t 1
+splitw -v -p 50
+selectp -t 0
+splitw -v -p 50
+
+# Select top left pane.
+select-pane -t 0
+
+# Launch SSH
+send-keys -t 0 "sleep 2" Enter "clear" Enter "sshpass -p '2!HPAdmin@123' ssh -o StrictHostKeyChecking=no ia_dut_12900E1" Enter
+send-keys -t 1 "sleep 2" Enter "clear" Enter "sshpass -p '2!HPAdmin@123' ssh -o StrictHostKeyChecking=no ia_dut_12900E2" Enter
+send-keys -t 2 "sleep 2" Enter "clear" Enter "sshpass -p '2!HPAdmin@123' ssh -o StrictHostKeyChecking=no ia_dut_5400R" Enter
+send-keys -t 3 "sleep 2" Enter "clear" Enter "sshpass -p '2!HPAdmin@123' ssh -o StrictHostKeyChecking=no ia_dut_5510" Enter
+
+# Delete Old Window
+kill-window -t old-tic-dut-tb1 
+
