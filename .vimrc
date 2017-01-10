@@ -70,8 +70,10 @@ set t_Co=256                       " Use 256 color in Vim
 
 " Colorscheme - Base16
 if !empty($BASE16_SCHEME)
-   let base16colorspace=256           " base16 Color Space
-   colorscheme base16-$BASE16_SCHEME  " base16 Scheme
+   if !empty(glob("~/.vim/bundle/base16-vim/colors/base16-".$BASE16_SCHEME.".vim"))
+      let base16colorspace=256           " base16 Color Space
+      colorscheme base16-$BASE16_SCHEME  " base16 Scheme
+   endif
 endif
 
 
