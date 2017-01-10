@@ -1,3 +1,7 @@
-
+# VIM Related Excludes
+*.swp
 ./.vim/.netrwhist
 ./.vim/bundle/*
+
+# TMUX Related Excludes
+./.tmux/plugins/*
