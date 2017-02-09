@@ -50,7 +50,7 @@ Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'kien/ctrlp.vim'
 let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_match_window = 'top,order:ttb'
-let g:ctrlp_max_files = 0
+let g:ctrlp_max_files = 1000
 let g:ctrlp_switch_buffer = 0
 let g:ctrlp_show_hidden = 1
 
@@ -69,10 +69,14 @@ set t_Co=256                       " Use 256 color in Vim
 
 
 " Colorscheme - Base16
-if !empty($BASE16_SCHEME)
-   if !empty(glob("~/.vim/bundle/base16-vim/colors/base16-".$BASE16_SCHEME.".vim"))
-      let base16colorspace=256           " base16 Color Space
-      colorscheme base16-$BASE16_SCHEME  " base16 Scheme
+" Note(Dan): Check if base16-shell is installed, otherwise the scheme won't
+"            look correct.
+if filereadable(expand("~/Source/base16-shell/README.md"))
+   if !empty($BASE16_SCHEME)
+      if filereadable(expand("~/.vim/bundle/base16-vim/colors/base16-".$BASE16_SCHEME.".vim"))
+         let base16colorspace=256           " base16 Color Space
+         colorscheme base16-$BASE16_SCHEME  " base16 Scheme
+      endif
    endif
 endif
 
