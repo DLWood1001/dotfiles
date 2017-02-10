@@ -1,0 +1,8 @@
+# Case insensitive tab completion
+# -------------------------------
+set completion-ignore-case on
+
+
+# Disable bell sound
+# ------------------
+set bell-style none
