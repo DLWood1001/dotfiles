@@ -91,6 +91,7 @@ set lazyredraw                   " Allow screen to be redraw lazy
 set showmatch                    " Highlight matching brackets [{()}]
 set directory^=$HOME/.vim/swap// " All swap files are located in this directory
 
+
 " Editing - Gutter
 set number                   " Line Number Enable
 set numberwidth=3            " Line Number Size
