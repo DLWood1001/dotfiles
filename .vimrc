@@ -82,14 +82,14 @@ endif
 
 
 " Editing - General
-set mouse=a                  " Mouse Enable (a = all modes.)
-set cursorline               " Cursor Line Enable
-set clipboard=unnamedplus    " Syncronize vim <-> system clipboard.
-set wildmenu                 " Autocomplete for Command Menu 
-                             "  Example :e ~/.<tab>
-set lazyredraw               " Allow screen to be redraw lazy
-set showmatch                " Highlight matching brackets [{()}]
-
+set mouse=a                      " Mouse Enable (a = all modes.)
+set cursorline                   " Cursor Line Enable
+set clipboard=unnamedplus        " Syncronize vim <-> system clipboard.
+set wildmenu                     " Autocomplete for Command Menu 
+                                 "  Example :e ~/.<tab>
+set lazyredraw                   " Allow screen to be redraw lazy
+set showmatch                    " Highlight matching brackets [{()}]
+set directory^=$HOME/.vim/swap// " All swap files are located in this directory
 
 " Editing - Gutter
 set number                   " Line Number Enable

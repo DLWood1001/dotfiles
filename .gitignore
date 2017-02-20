@@ -2,6 +2,7 @@
 *.swp
 ./.vim/.netrwhist
 ./.vim/bundle/*
+./.vim/swap/*
 
 # TMUX Related Excludes
 ./.tmux/plugins/*
