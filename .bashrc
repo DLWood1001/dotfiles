@@ -87,10 +87,10 @@ fi
 # Tests
 # -----
 # Vagrant Exports
-export VAGRANT_HOME=/home/wooddan/Vagrant/.vagrant
+export VAGRANT_HOME=~/Vagrant/.vagrant
 export VAGRANT_DEFAULT_PROVIDER=virtualbox
 export RUBYOPT="-W0"
 #export RUBYOPT="-W0" rspec
-export PACKER_CACHE_DIR=/home/wooddan/.packer_cache
+export PACKER_CACHE_DIR=~/.packer_cache
 
 

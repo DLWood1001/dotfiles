@@ -159,5 +159,10 @@ while c <= 'z'
    let c = nr2char(1+char2nr(c))
 endw
 
-set ttimeout ttimeoutlen=50
+set ttimeout ttimeoutlen=10
+" set ttimeout ttimeoutlen=50
 
+
+" Testing
+" nnoremap <silent> oo o<ESC>  " Insert empty line in normal mode below cursor.
+" nnoremap <silent> OO O<ESC>  " Insert empty line in normal mode above cursor.
