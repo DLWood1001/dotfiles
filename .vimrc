@@ -59,6 +59,8 @@ Plugin 'tpope/vim-commentary'
 Plugin 'chase/vim-ansible-yaml'
 
 Plugin 'tpope/vim-surround'
+vmap ' <Plug>VSurround'
+vmap " <Plug>VSurround"
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
