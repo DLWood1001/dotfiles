@@ -94,7 +94,8 @@ set wildmenu                     " Autocomplete for Command Menu
 set lazyredraw                   " Allow screen to be redraw lazy
 set showmatch                    " Highlight matching brackets [{()}]
 set directory^=$HOME/.vim/swap// " All swap files are located in this directory
-
+set nrformats-=octal             " Number formats. Remove octal as it makes
+                                 " decimal increments messed up.
 
 " Editing - Gutter
 set number                   " Line Number Enable
