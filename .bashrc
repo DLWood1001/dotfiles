@@ -96,6 +96,8 @@ export PATH=$PATH:$GOPATH:$GOPATH/bin
 # -----
 # Vagrant Exports
 export VAGRANT_HOME=$(readlink -f ~/Vagrant)
-#export VAGRANT_DEFAULT_PROVIDER=virtualbox
+export VAGRANT_DEFAULT_PROVIDER=virtualbox
+export RUBYOPT="-W0"
+export PACKER_CACHE_DIR=~/.packer_cache
 
 

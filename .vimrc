@@ -59,6 +59,8 @@ Plugin 'tpope/vim-commentary'
 Plugin 'chase/vim-ansible-yaml'
 
 Plugin 'tpope/vim-surround'
+vmap ' <Plug>VSurround'
+vmap " <Plug>VSurround"
 
 Plugin 'Valloric/YouCompleteMe'
 let g:ycm_python_binary_path = 'python'
@@ -100,7 +102,8 @@ set showmatch                    " Highlight matching brackets [{()}]
 set directory^=$HOME/.vim/swap// " All swap files are located in this directory
 set visualbell                   " Disable audible bell by enabling the visualbell
 set t_vb=                        " Disable visualbell; Note this fully disables the bell
-
+set nrformats-=octal             " Number formats. Remove octal as it makes
+                                 " decimal increments messed up.
 
 " Editing - Gutter
 set number                   " Line Number Enable
@@ -169,5 +172,10 @@ while c <= 'z'
    let c = nr2char(1+char2nr(c))
 endw
 
-set ttimeout ttimeoutlen=50
+set ttimeout ttimeoutlen=10
+" set ttimeout ttimeoutlen=50
 
+
+" Testing
+" nnoremap <silent> oo o<ESC>  " Insert empty line in normal mode below cursor.
+" nnoremap <silent> OO O<ESC>  " Insert empty line in normal mode above cursor.
