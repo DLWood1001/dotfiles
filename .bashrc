@@ -86,6 +86,12 @@ if [[ -f $LAB_SSH_KEY ]]; then
 fi
 
 
+# Go
+# --
+export GOPATH=~/Source/go
+export PATH=$PATH:$GOPATH:$GOPATH/bin
+
+
 # Tests
 # -----
 # Vagrant Exports
