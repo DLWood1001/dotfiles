@@ -120,11 +120,13 @@ set scrolloff=3
 
 
 " Editing - Indenting
-set tabstop=3                " Number of columns that a <TAB> counts for.
-set expandtab                " <Tab> will generate spaces to fill the columns based on <tabstop>.
-set autoindent               " Maintain current indentation on newline.
-set smarttab                 " <BS> deletes shiftwidth instead of one space.
-set shiftwidth=3             " Used in conjunction with >> << block shifting. 
+set tabstop=2                    " Number of columns that a <TAB> counts for.
+set softtabstop=0                " x
+set expandtab                    " <Tab> will generate spaces to fill the columns based on <tabstop>.
+set autoindent                   " Maintain current indentation on newline.
+set smarttab                     " <BS> deletes shiftwidth instead of one space.
+set shiftwidth=2                 " Used in conjunction with >> << block shifting.
+let g:python_recommended_style=0 " Python ftplugin fixup
 
 
 " Editing - Indenting Overrides
