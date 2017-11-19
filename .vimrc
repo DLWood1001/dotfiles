@@ -98,6 +98,8 @@ set wildmenu                     " Autocomplete for Command Menu
 set lazyredraw                   " Allow screen to be redraw lazy
 set showmatch                    " Highlight matching brackets [{()}]
 set directory^=$HOME/.vim/swap// " All swap files are located in this directory
+set visualbell                   " Disable audible bell by enabling the visualbell
+set t_vb=                        " Disable visualbell; Note this fully disables the bell
 
 
 " Editing - Gutter
