@@ -64,7 +64,8 @@ export TCLLIBPATH="/opt/ActiveTcl-8.5/lib/teapot/package/linux-glibc2.3-x86_64/l
 # export BASE16_SCHEME="railscasts"
 # export BASE16_AIRLINE_SCHEME="railscasts"
 # export BASE16_SCHEME="google"
-export BASE16_SCHEME="twilight"
+# export BASE16_SCHEME="twilight"
+export BASE16_SCHEME="monokai"
 # export BASE16_AIRLINE_SCHEME="twilight"
 export BASE16_SHELL="$HOME/Source/base16-shell/scripts/base16-$BASE16_SCHEME.sh"
 
